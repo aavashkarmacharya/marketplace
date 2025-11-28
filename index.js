@@ -68,12 +68,14 @@ data.forEach(product =>{
 }
 )
 
-
 btn1.onclick = () => {
 const tester = item.value;
-console.log(tester); 
-
-
+    const result = data.filter(p => p.pname == tester);
+    prdt.textContent = "";
+    if(result != 0){
+        console.log(result);
+    }
+    
 }
 
 
