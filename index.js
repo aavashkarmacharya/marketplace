@@ -50,8 +50,7 @@ data.forEach(product =>{
 
     const name = document.createElement("p");
     name.textContent =  "Name: " + product.pname;
-    console.log(name);
-
+   
     const pr = document.createElement("p");
     pr.textContent = "price: " + product.price;
 
@@ -67,15 +66,22 @@ data.forEach(product =>{
     prdt.appendChild(contain);
    
 }
-
-
-
-
-
-
-
-
-
-
-
 )
+
+
+btn1.onclick = () => {
+const tester = item.value;
+console.log(tester); 
+
+
+}
+
+
+
+
+
+
+
+
+
+
