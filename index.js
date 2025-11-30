@@ -11,37 +11,49 @@ price: 150,
 stock: 100,
 },
 {
-   id: 1,
+   id: 2,
 pname: "random",
 price: 150,
 stock: 100, 
 },
 {
-id: 1,
+id: 3,
 pname: "Random",
 price: 150,
 stock: 100,
 },
 {
-id: 1,
+id: 4,
 pname: "Random",
 price: 150,
 stock: 100,
 },
 {
-id: 1,
+id: 5,
 pname: "Random",
 price: 150,
 stock: 100,
 },
 {
-id: 1,
+id: 6,
 pname: "Random",
 price: 150,
 stock: 100,
 },
 
 ]
+
+ const JSONstring = JSON.stringify(data);
+localStorage.setItem("setJSON", JSONstring);
+const allproduct = localStorage.getItem("setJSON");
+const pharsedallproduct = JSON.parse(allproduct);
+console.log(pharsedallproduct);
+
+
+
+
+//creating cards
+
 data.forEach(product =>{
     const contain = document.createElement("div");
     contain.classList.add("productcard");
@@ -65,9 +77,11 @@ data.forEach(product =>{
     contain.appendChild(details);
     prdt.appendChild(contain);
    
+
+
 }
 )
-
+//search function
 btn1.onclick = () => {
 const tester = item.value;
     const result = data.filter(p => p.pname == tester);
@@ -76,6 +90,7 @@ const tester = item.value;
         const display = document.createElement("h3");
         display.innerHTML = "No product found!!";
         prdt.appendChild(display);
+
     }
     if(result.length>0){
         result.forEach(product=> {
@@ -99,10 +114,43 @@ const tester = item.value;
     
 }
 
+let text = localStorage.getItem("setJSON");
+if(text){
+let arrobj = JSON.parse(text);
+if(!Array.isArray(arrobj)){
+    arrobj = [arrobj];
+}
+arrobj.forEach(obj =>
+{
+const jname = obj.name;
+const jprice = obj.amount;
+const jstock = obj.quantity;
+console.log(jname, jprice, jstock);
 
+const contain = document.createElement("div");
+    contain.classList.add("productcard");
+    const details = document.createElement("li");
+    details.classList.add("productlist")
 
+    const name = document.createElement("p");
+    name.textContent =  "Name: " + jname;
+   
+    const pr = document.createElement("p");
+    pr.textContent = "price: " + jprice;
 
+    const stk = document.createElement("p");
+    stk.textContent = "stock: " + jstock;
+    
 
+    details.appendChild(name);
+    details.appendChild(pr);
+    details.appendChild(stk);
+
+    contain.appendChild(details);
+    prdt.appendChild(contain);
+})
+
+}
 
 
 
