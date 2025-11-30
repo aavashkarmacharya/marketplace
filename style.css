@@ -36,10 +36,9 @@ position: relative;
     right: 28px;
     border-radius: 100px;
     top: -2.96px;
-
-
-
-
+}
+#btn-srch:hover{
+    cursor: pointer;
 }
 #btn-sub{
     height: 33px;
@@ -86,4 +85,7 @@ padding: 8px;
     width: 50px;
     border-radius: 7px; 
     height: 150px;
+}
+.productli{
+    list-style-type: none;
 }

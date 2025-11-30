@@ -72,8 +72,29 @@ btn1.onclick = () => {
 const tester = item.value;
     const result = data.filter(p => p.pname == tester);
     prdt.textContent = "";
-    if(result != 0){
-        console.log(result);
+    if(result.length === 0){
+        const display = document.createElement("h3");
+        display.innerHTML = "No product found!!";
+        prdt.appendChild(display);
+    }
+    if(result.length>0){
+        result.forEach(product=> {
+     const containsrch = document.createElement("div");
+     containsrch.classList.add("productcard");
+     const values = document.createElement("li");
+     values.classList.add("productli");
+     const name = document.createElement("p");
+     name.textContent = "Name: " + product.pname;
+     const pr = document.createElement("p");
+     pr.textContent = "Price: " + product.price;
+     const stk = document.createElement("p");
+     stk.textContent = "Stock: " + product.stock;
+     values.appendChild(name);
+     values.appendChild(pr);
+     values.appendChild(stk);
+     containsrch.appendChild(values);
+     prdt.appendChild(containsrch);
+    });
     }
     
 }
