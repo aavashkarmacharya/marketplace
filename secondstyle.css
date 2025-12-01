@@ -1,0 +1,16 @@
+form{
+    font-size: 20px;
+     
+}
+#pname{
+    position: absolute;
+    left: 128px;
+}
+#price, #stock{
+        position: absolute;
+        left: 128px;
+}
+#btns{
+ position: absolute;
+ left: 333px;
+}
