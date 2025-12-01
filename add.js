@@ -10,14 +10,15 @@ btn.onclick= () =>{
     const pname = newdata.get("pname");
     const price = newdata.get("price");
     const stock = newdata.get("stock");
-    const data = {
-        name: pname,
-        amount: price,
-        quantity: stock
-    }
     
     const product = localStorage.getItem("setJSON");
     const parsedProduct = JSON.parse(product)
+    const data = {
+        id: parsedProduct.length +1,
+        name: pname,
+        amount: parseInt(price),
+        quantity: parseInt( stock) 
+    }
 
     const newProducts = [...parsedProduct, data]
     JSONstring = JSON.stringify(newProducts);
