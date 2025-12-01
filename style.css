@@ -82,10 +82,10 @@ padding: 8px;
     background-color: aquamarine;
     margin: 2px;
     height:fit-content;
-    width: 50px;
+    width: fit-content;
     border-radius: 7px; 
-    height: 150px;
 }
+
 .productli{
     list-style-type: none;
 }

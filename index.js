@@ -1,6 +1,5 @@
 const item = document.getElementById("item");
 const btn1 = document.getElementById("btn-srch");
-const pdt = document.getElementById("product-list");
 const prdt = document.getElementById("products");
 
 const data = [
@@ -60,6 +59,7 @@ if (stored) {
 }
 
 
+
 function createcard(product) {
   const contain = document.createElement("div");
   contain.classList.add("productcard");
@@ -85,6 +85,15 @@ function createcard(product) {
 
 
 //  search function
+
+item.addEventListener("keypress", function(event){
+if(event.key === "Enter"){  
+    btn1.click();
+}
+});
+
+
+
 btn1.onclick = () => {
 const tester = item.value;
 
@@ -103,7 +112,7 @@ const tester = item.value;
      const values = document.createElement("li");
      values.classList.add("productli");
      const name = document.createElement("p");
-     name.textContent = "Name: " + product.name;
+     name.textContent = "Name:" + product.name;
      const pr = document.createElement("p");
      pr.textContent = "Price: " + product.amount;
      const stk = document.createElement("p");

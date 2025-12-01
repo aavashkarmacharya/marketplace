@@ -24,7 +24,6 @@ btn.onclick= () =>{
     JSONstring = JSON.stringify(newProducts);
 
     localStorage.setItem("setJSON", JSONstring);
-    console.log({newProducts});
     
 }
 
