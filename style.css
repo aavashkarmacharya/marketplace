@@ -5,12 +5,14 @@ body{
 margin: 2px;
 background-color:rgb(173, 162, 162);
 height: 33px;
-padding: 1%;
+padding: 10px;
 align-content: center;
 position: relative;
+margin-bottom: 10px;
 }
 
 #item{
+
     position: relative;
     padding-bottom: 4px;
     top: -2.6px;
@@ -35,12 +37,13 @@ position: relative;
     position: relative;
     right: 28px;
     border-radius: 100px;
-    top: -2.96px;
+    top: -1.9px;
 }
 #btn-srch:hover{
     cursor: pointer;
 }
 #btn-sub{
+
     height: 33px;
     position: relative;
     top: -3.9px;
@@ -54,7 +57,7 @@ position: relative;
 }
 
 #products{
-
+    padding-top: 10px;
 display: block;
 background-color: white;
 width: 100%;
@@ -62,9 +65,7 @@ height: 100vh;
 display: flex;
 margin: 2px;
 flex-wrap: wrap;
-gap: 4px;
-justify-content: flex-start;
-padding: 8px;
+gap: 10px;
 
 }
 
@@ -77,13 +78,14 @@ padding: 8px;
 }
 
 .productcard{
-    padding: 8px;
+    padding: 1%;
     position: relative;
-    background-color: aquamarine;
+    background-color: rgb(90, 153, 182);
     margin: 2px;
     height:fit-content;
     width: fit-content;
-    border-radius: 7px; 
+     border-radius: 7px; 
+     font-weight: bold;
 }
 
 .productli{
